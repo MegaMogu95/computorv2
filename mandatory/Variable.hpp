@@ -29,7 +29,7 @@ struct ComplexVariable : public Variable
 {
 	Complex	value;
 
-    ComplexVariable(const std::string &name, Complex z);
+    ComplexVariable(const std::string &name, const Complex &z);
 
     void print(std::ostream &os) const; 
 };
@@ -40,10 +40,17 @@ struct  MatrixVariable : public Variable
 
     MatrixVariable(const std::string &name, const Matrix &M);
 
+    void    print(std::ostream &os) const;
+};
 
-}
+struct  FunctionVariable : public Variable
+{
+    Function    value;
 
-struct  
+    FunctionVariable(const std::string &name, const Function &f);
+
+    void    print(std::ostream &os) const;
+};
 
 std::ostream    &operator<<(std::ostream &os, const Variable &v);
 
