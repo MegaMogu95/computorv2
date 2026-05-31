@@ -3,6 +3,8 @@
 
 # include <iostream>
 # include "Complex.hpp"
+# include "Matrix.hpp"
+# include "Function.hpp"
 
 class Variable
 {

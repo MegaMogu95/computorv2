@@ -15,6 +15,7 @@ std::string const &Variable::getName() const
 }
 
 RationalVariable::RationalVariable(std::string const &name, double x):
+	Variable(name),
 	value(x)
 {
 }
@@ -25,6 +26,7 @@ void	RationalVariable::print(std::ostream &os)
 }
 
 ComplexVariable::ComplexVariable(std::string const &name, const Complex &z):
+	Variable(name),
 	value(z)
 {
 }
